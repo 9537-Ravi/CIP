@@ -1,8 +1,6 @@
 #!/bin/bash
 apt-get update
- 
 apt-get install sssd sssd-tools -y
-ls -lrth
 cp -rp Google_2026_05_22_46666* /var/
 chmod 777 /var/Google_2026_05_22_46666*
 curl https://raw.githubusercontent.com/9537-Ravi/CIP/main/custom_conf.txt
