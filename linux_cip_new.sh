@@ -29,6 +29,31 @@ getent passwd
 sudo apt update -y
 sudo apt install -y sssd-tools
 sudo gedit/etc/sssd/sssd.conf
+#!/bin/bash
+
+# URL of the file to be downloaded
+curl="https://raw.githubusercontent.com/9537-Ravi/CIP/main/custom_conf.txt"
+
+# Temporary file to store the downloaded file
+TEMP_FILE="/tmp/temp_downloaded_file"
+
+# Destination file where the data will be copied
+DESTINATION_FILE="gedit/etc/sssd/sssd.conf"
+
+# Download the file using curl
+curl -o "$https://raw.githubusercontent.com/9537-Ravi/CIP/main/custom_conf.txt"
+
+# Check if the download was successful
+if [ $? -eq 0 ]; then
+    # Copy data from the temporary file to the destination file
+    cp "$TEMP_FILE" "$DESTINATION_FILE"
+    echo "Data copied from downloaded file to $DESTINATION_FILE successfully."
+else
+    echo "Failed to download the file."
+fi
+
+# Clean up the temporary file
+rm "$TEMP_FILE"
 #if the Fiel open Balnk so copy bellow Fiel
 #[sssd]
 services = nss, pam
