@@ -27,7 +27,6 @@ getent passwd
 pam-auth-update
 getent passwd
 sudo apt update -y
-cat /home/delhivery/Desktop/Linux/sssd_conf.txt > /etc/sssd/sssd.conf
 sudo apt install -y sssd-tools
 sudo gedit/etc/sssd/sssd.conf
 #if the Fiel open Balnk so copy bellow Fiel
