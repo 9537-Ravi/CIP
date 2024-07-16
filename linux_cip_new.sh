@@ -5,7 +5,8 @@ apt-get install sssd sssd-tools -y
 ls -lrth
 cp -rp Google_2026_05_22_46666* /var/
 chmod 777 /var/Google_2026_05_22_46666*
-cat /home/delhivery/Desktop/Linux/sssd_conf.txt > /etc/sssd/sssd.conf
+curl https://raw.githubusercontent.com/9537-Ravi/CIP/main/custom_conf.txt
+cat /home/delhivery/Download/sssd_conf.txt > /etc/sssd/sssd.conf
 chown root:root /etc/sssd/sssd.conf 
 chmod 600 /etc/sssd/sssd.conf 
 service sssd restart 
